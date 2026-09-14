@@ -30,8 +30,8 @@
       property="og:image:alt"
       content="Shane Dowley Consulting — Organisational Leadership Consulting &amp; Executive Coaching"
     />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="assets/js/site.js" defer></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=sr03-1" />
+    <script src="assets/js/site.js?v=sr03-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,9 +64,42 @@
           data-menu-panel
           data-open="false"
         >
-          <a class="primary-nav__link" href="about.html" aria-current="page"
-            >About</a
-          >
+          <div class="primary-nav__about" data-about-menu>
+            <a class="primary-nav__link" href="about.html" aria-current="page"
+              >About</a
+            >
+            <span class="about-menu-indicator" aria-hidden="true">⌄</span>
+            <button
+              class="about-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-section-navigation"
+              data-about-toggle
+              hidden
+            >
+              <span class="visually-hidden">Show About sections</span>
+              <span aria-hidden="true">⌄</span>
+            </button>
+            <ul
+              class="about-submenu"
+              id="about-section-navigation"
+              aria-label="About sections"
+              data-about-submenu
+              data-open="false"
+            >
+              <li><a href="about.html#journey-heading">My Journey</a></li>
+              <li>
+                <a href="about.html#bring-heading">Who I am and what I bring</a>
+              </li>
+              <li>
+                <a href="about.html#human-heading"
+                  >A Human and Practical Approach</a
+                >
+              </li>
+              <li><a href="about.html#experience-heading">Experience</a></li>
+              <li><a href="about.html#why-heading">Why work with me?</a></li>
+            </ul>
+          </div>
           <a class="primary-nav__link" href="services.html">Services</a>
           <a class="primary-nav__link" href="contact.html">Contact</a>
           <a
@@ -83,7 +116,6 @@
         <div class="about-hero__grid">
           <div class="about-hero__content">
             <p class="about-hero__eyebrow">About Shane</p>
-            <span class="accent-rule" aria-hidden="true"></span>
             <h1 id="about-heading">
               Curious by nature. Focused on people, relationships and outcomes.
             </h1>
@@ -97,15 +129,15 @@
           <div class="portrait-media about-hero__portrait">
             <picture class="portrait-media__picture">
               <source
-                srcset="assets/img/shane-portrait.webp"
+                srcset="assets/img/shane-about-portrait.webp"
                 type="image/webp"
               />
               <img
                 class="portrait-media__image"
-                src="assets/img/shane-portrait.jpg"
-                alt="Shane Dowley"
+                src="assets/img/shane-about-portrait.jpg"
+                alt="Portrait of Shane Dowley"
                 width="1800"
-                height="2689"
+                height="3057"
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"
@@ -121,7 +153,6 @@
       >
         <div class="container">
           <h2 id="journey-heading">My Journey</h2>
-          <span class="accent-rule" aria-hidden="true"></span>
           <div class="about-journey__grid">
             <div class="about-journey__narrative">
               <h3>Background</h3>
@@ -162,17 +193,16 @@
                 situation becomes difficult.
               </p>
               <p>
-                My work now focuses on the human and organisational dynamics
-                behind performance and change: why capable people become
-                misaligned, why sensible strategies lose momentum, and why some
+                My work focuses on the human and organisational dynamics behind
+                performance and change: why capable people become misaligned,
+                why sensible strategies lose momentum, and why some
                 organisations learn and adapt while others remain stuck.
               </p>
               <p>
                 Today, I bring together leadership development, organisational
-                alignment and performance, executive coaching, mindset practice
-                and cross-team facilitation to help teams and organisations
-                achieve outcomes they value, in a way that reflects who they
-                are.
+                alignment, executive coaching, mindset change and cross-team
+                facilitation to help teams and organisations achieve outcomes
+                they value, in a way that reflects who they are.
               </p>
 
               <h3>Why I Do This Work</h3>
@@ -220,7 +250,6 @@
       >
         <div class="container">
           <h2 id="bring-heading">Who I am and what I bring</h2>
-          <span class="accent-rule" aria-hidden="true"></span>
           <div class="about-bring__grid">
             <div class="about-bring__column">
               <h3>Experience and Professional Practice</h3>
@@ -248,7 +277,7 @@
               </p>
             </div>
 
-            <div class="about-bring__column">
+            <div class="about-bring__column about-bring__column--work">
               <h3>How I See the Work</h3>
               <p>
                 Complexity cannot be reduced to a prescribed answer or a
@@ -274,13 +303,11 @@
                 </li>
                 <li>What is being avoided, assumed or left unsaid?</li>
               </ul>
-              <p class="standout-line">Clarity creates choice.</p>
-              <p>
-                From here, leaders can align around a direction, make more
-                deliberate decisions and create the conditions in which people
-                can contribute, collaborate and achieve outcomes that matter.
-              </p>
+            </div>
 
+            <p class="standout-line">Clarity creates choice.</p>
+
+            <div class="about-bring__column about-bring__column--how">
               <h3>How I Work</h3>
               <p>My approach is calm, direct and grounded in reality.</p>
               <p>
@@ -295,6 +322,11 @@
                 patterns, test assumptions, surface difficult truths, run
                 experiments and find what may not yet be visible or obvious.
               </p>
+            </div>
+
+            <div
+              class="about-bring__column about-bring__column--work about-bring__column--work-conclusion"
+            >
               <p>
                 Sometimes that work is personal: strengthening judgement,
                 confidence and self-awareness through executive coaching.
@@ -306,8 +338,9 @@
               </p>
               <p>Often, it is both.</p>
               <p>
-                The form of the work matters less than whether it helps people
-                think clearly, take responsibility and make progress that lasts.
+                From here, leaders can align around a direction, make more
+                deliberate decisions and create the conditions in which people
+                can contribute, collaborate and achieve outcomes that matter.
               </p>
             </div>
           </div>
@@ -320,17 +353,28 @@
       >
         <div class="container">
           <h2 id="human-heading">A Human and Practical Approach</h2>
-          <span class="accent-rule" aria-hidden="true"></span>
           <div class="human-approach__grid">
             <div class="human-approach__column">
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   Leadership is personal, but it never happens in isolation.
                 </p>
               </div>
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   How a leader sees other people affects how they listen,
                   decide, communicate and respond under pressure. Those
@@ -339,7 +383,13 @@
                 </p>
               </div>
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   My work is informed by years of consulting in organisational
                   alignment, professional coaching, mindset facilitation,
@@ -350,21 +400,39 @@
             </div>
             <div class="human-approach__column">
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   People are more able to confront difficult realities when they
                   feel respected, trusted and accountable for their role.
                 </p>
               </div>
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   I offer a space where leaders can think honestly, challenge
                   established patterns and strengthen their own judgement.
                 </p>
               </div>
               <div class="approach-point">
-                <span class="approach-marker" aria-hidden="true"></span>
+                <span class="approach-marker" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path
+                      d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z"
+                    />
+                  </svg>
+                </span>
                 <p>
                   The goal is not perfection. It is greater awareness, stronger
                   relationships, clearer choices and leadership that has a
@@ -372,6 +440,237 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section experience-associations"
+        aria-labelledby="experience-heading"
+      >
+        <div class="container">
+          <div class="experience-introduction">
+            <div>
+              <h2 id="experience-heading">Experience</h2>
+            </div>
+
+            <p class="experience-statement">
+              Working with
+              <span
+                class="organisation-names"
+                aria-label="IBM, Microsoft, The Economist and Nokia"
+              >
+                <span>IBM</span>
+                <span>Microsoft</span>
+                <span>The Economist</span>
+                <span>Nokia</span>
+              </span>
+              <span class="credentials-continuation">
+                in organisational transformation, executive coaching,
+                facilitation, mindset training and business agility.
+              </span>
+            </p>
+          </div>
+
+          <div class="association-group">
+            <p class="association-label">Partnerships and associations with:</p>
+
+            <div class="association-marks">
+              <a
+                href="https://www.arbingerinstitute.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Arbinger Institute UK website"
+              >
+                <picture class="association-mark association-mark--arbinger">
+                  <source
+                    srcset="assets/associations/arbinger-institute-uk-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="assets/associations/arbinger-institute-uk-logo.png"
+                    alt="Arbinger Institute UK"
+                    width="640"
+                    height="202"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+
+              <a
+                href="https://www.betterfasterfurther.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Better Faster Further website"
+              >
+                <picture class="association-mark association-mark--bff">
+                  <source
+                    srcset="assets/associations/better-faster-further-logo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="assets/associations/better-faster-further-logo.jpg"
+                    alt="Better Faster Further"
+                    width="200"
+                    height="200"
+                    loading="lazy"
+                  />
+                </picture>
+              </a>
+
+              <a
+                href="https://www.stellafai.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Stellafai website"
+              >
+                <span class="association-mark association-mark--stellafai">
+                  <img
+                    src="assets/associations/stellafai-logo.svg"
+                    alt="Stellafai"
+                    width="198"
+                    height="70"
+                    loading="lazy"
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="association-group qualification-group">
+            <p class="association-label">Qualifications and Accreditation:</p>
+
+            <div class="qualification-marks">
+              <picture class="qualification-mark qualification-mark--cpcc">
+                <source
+                  srcset="
+                    assets/qualifications/cpcc-certified-coactive-professional-coach.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="assets/qualifications/cpcc-certified-coactive-professional-coach.png"
+                  alt="Certified Co-Active Professional Coach (CPCC)"
+                  width="324"
+                  height="324"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture class="qualification-mark qualification-mark--icf">
+                <source
+                  srcset="
+                    assets/qualifications/icf-acc-associate-certified-coach.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="assets/qualifications/icf-acc-associate-certified-coach.png"
+                  alt="ICF Associate Certified Coach (ACC)"
+                  width="600"
+                  height="600"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture class="qualification-mark qualification-mark--csm">
+                <source
+                  srcset="assets/qualifications/scrum-alliance-csm-seal.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/qualifications/scrum-alliance-csm-seal.png"
+                  alt="Scrum Alliance Certified ScrumMaster (CSM)"
+                  width="556"
+                  height="484"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture
+                class="qualification-mark qualification-mark--certificate"
+              >
+                <source
+                  srcset="
+                    assets/qualifications/arbinger-outward-mindset-trainer-accreditation-certificate.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="assets/qualifications/arbinger-outward-mindset-trainer-accreditation-certificate.png"
+                  alt="Arbinger Developing and Implementing an Outward Mindset trainer accreditation certificate"
+                  width="1600"
+                  height="1236"
+                  loading="lazy"
+                />
+              </picture>
+
+              <picture
+                class="qualification-mark qualification-mark--certificate"
+              >
+                <source
+                  srcset="
+                    assets/qualifications/icp-ent-certified-professional-certificate.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="assets/qualifications/icp-ent-certified-professional-certificate.png"
+                  alt="ICAgile Certified Professional in Agility in the Enterprise (ICP-ENT) certificate"
+                  width="1600"
+                  height="1236"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--spacious testimonial"
+        aria-label="Client testimonial"
+      >
+        <div class="container testimonial__inner">
+          <blockquote>
+            <p>
+              Shane brings a rare mix of clarity, empathy, and strategic
+              thinking to his coaching. He helped me identify blind spots I
+              didn’t even realise I had and gave me the tools to address them
+              confidently.
+            </p>
+            <cite>— Katarina Ciganikova, IBM</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section
+        class="section section--spacious why-section"
+        aria-labelledby="why-heading"
+      >
+        <div class="container why-layout">
+          <div class="why-heading-group">
+            <h2 id="why-heading">Why work with me?</h2>
+            <p class="experience-anchor">
+              <strong>Over 30 years' experience</strong> helping people, teams
+              and organisations transform how they work and the outcomes they
+              achieve.
+            </p>
+          </div>
+
+          <div class="why-argument">
+            <p class="why-lead">
+              My work brings deep experience and a proven track record in
+              leadership development, organisational alignment, executive
+              coaching and cross-team facilitation.
+            </p>
+            <p>
+              I have a practical understanding, of the human and systemic
+              dynamics that shape how organisations perform and change.
+            </p>
+            <p class="why-close">
+              The work is calm, direct and grounded in reality.
+            </p>
           </div>
         </div>
       </section>
@@ -437,7 +736,19 @@
           <h2 class="site-footer__heading">Connect</h2>
           <nav aria-label="Connect">
             <a href="mailto:shane@shanedowley.com">Email</a>
-            <a href="https://www.linkedin.com/in/shanedowley/">LinkedIn</a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/shanedowley/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shane Dowley on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M5.3 3.5A1.8 1.8 0 1 1 5.3 7a1.8 1.8 0 0 1 0-3.5ZM3.8 8.5h3v11.7h-3V8.5Zm5 0h2.9v1.6h.1c.4-.8 1.4-2 3.4-2 3.6 0 4.3 2.4 4.3 5.5v6.6h-3v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.9h-3V8.5Z"
+                />
+              </svg>
+            </a>
           </nav>
         </div>
         <div>

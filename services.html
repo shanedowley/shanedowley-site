@@ -30,8 +30,8 @@
       property="og:image:alt"
       content="Shane Dowley Consulting — Organisational Leadership Consulting &amp; Executive Coaching"
     />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="assets/js/site.js" defer></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=sr09-2" />
+    <script src="assets/js/site.js?v=sr03-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,7 +64,40 @@
           data-menu-panel
           data-open="false"
         >
-          <a class="primary-nav__link" href="about.html">About</a>
+          <div class="primary-nav__about" data-about-menu>
+            <a class="primary-nav__link" href="about.html">About</a>
+            <span class="about-menu-indicator" aria-hidden="true">⌄</span>
+            <button
+              class="about-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-section-navigation"
+              data-about-toggle
+              hidden
+            >
+              <span class="visually-hidden">Show About sections</span>
+              <span aria-hidden="true">⌄</span>
+            </button>
+            <ul
+              class="about-submenu"
+              id="about-section-navigation"
+              aria-label="About sections"
+              data-about-submenu
+              data-open="false"
+            >
+              <li><a href="about.html#journey-heading">My Journey</a></li>
+              <li>
+                <a href="about.html#bring-heading">Who I am and what I bring</a>
+              </li>
+              <li>
+                <a href="about.html#human-heading"
+                  >A Human and Practical Approach</a
+                >
+              </li>
+              <li><a href="about.html#experience-heading">Experience</a></li>
+              <li><a href="about.html#why-heading">Why work with me?</a></li>
+            </ul>
+          </div>
           <a class="primary-nav__link" href="services.html" aria-current="page"
             >Services</a
           >
@@ -87,7 +120,6 @@
               Supporting leaders and organisations to navigate complexity and
               create change that lasts.
             </h1>
-            <span class="accent-rule" aria-hidden="true"></span>
             <p>
               I work at the intersection of people, leadership and systems,
               helping you see more clearly, make better decisions and create the
@@ -118,14 +150,20 @@
               Leadership development, executive coaching and organisational
               leadership consulting.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
           </div>
-          <div class="reading-width">
+          <div class="reading-width services-introduction__evidence">
             <p>
               The starting point is always the same: understand what is really
               happening, establish what matters, and create the awareness and
               confidence to move forward.
             </p>
+            <blockquote class="services-introduction__quote">
+              <span class="services-introduction__quote-mark" aria-hidden="true"
+                >“</span
+              >
+              “His approach is not just about conversations, but about a real
+              transformation of mindset and actions.”
+            </blockquote>
           </div>
         </div>
       </section>
@@ -238,7 +276,6 @@
             <h2 id="leadership-development-heading">
               Leadership capability develops through awareness and practice.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
             <p>
               Models, tools and frameworks help, but lasting value comes when
               leaders better understand themselves and those they impact, and
@@ -332,7 +369,6 @@
             <h2 id="executive-coaching-heading">
               Leadership can be demanding and at times isolating.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
             <p>
               The more responsibility we carry as leaders, the fewer
               opportunities there can be to step outside the pressures of the
@@ -399,11 +435,7 @@
                 invaluable ever since. I've been able to draw on them through
                 times of intense change in management/executive roles.”
               </p>
-              <cite
-                >— Rebecca Hiscutt<small
-                  >Founder, Calm Horizons Nutrition</small
-                ></cite
-              >
+              <cite>— Dr Rebecca Hiscutt. PhD </cite>
             </blockquote>
           </aside>
         </div>
@@ -431,7 +463,6 @@
               Organisations rarely struggle because people do not care or are
               not working hard enough.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
             <p>
               More often, capable people are operating within conditions that
               make effective collaboration difficult: competing priorities,
@@ -526,7 +557,6 @@
               Organisations, situations and people are complex. There is no
               standard engagement.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
           </div>
           <div class="services-process__copy">
             <p>
@@ -613,7 +643,19 @@
           <h2 class="site-footer__heading">Connect</h2>
           <nav aria-label="Connect">
             <a href="mailto:shane@shanedowley.com">Email</a>
-            <a href="https://www.linkedin.com/in/shanedowley/">LinkedIn</a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/shanedowley/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shane Dowley on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M5.3 3.5A1.8 1.8 0 1 1 5.3 7a1.8 1.8 0 0 1 0-3.5ZM3.8 8.5h3v11.7h-3V8.5Zm5 0h2.9v1.6h.1c.4-.8 1.4-2 3.4-2 3.6 0 4.3 2.4 4.3 5.5v6.6h-3v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.9h-3V8.5Z"
+                />
+              </svg>
+            </a>
           </nav>
         </div>
         <div>

@@ -36,8 +36,8 @@
       property="og:image:alt"
       content="Shane Dowley Consulting — Organisational Leadership Consulting &amp; Executive Coaching"
     />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="assets/js/site.js" defer></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=sr03-1" />
+    <script src="assets/js/site.js?v=sr03-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -70,7 +70,40 @@
           data-menu-panel
           data-open="false"
         >
-          <a class="primary-nav__link" href="about.html">About</a>
+          <div class="primary-nav__about" data-about-menu>
+            <a class="primary-nav__link" href="about.html">About</a>
+            <span class="about-menu-indicator" aria-hidden="true">⌄</span>
+            <button
+              class="about-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-section-navigation"
+              data-about-toggle
+              hidden
+            >
+              <span class="visually-hidden">Show About sections</span>
+              <span aria-hidden="true">⌄</span>
+            </button>
+            <ul
+              class="about-submenu"
+              id="about-section-navigation"
+              aria-label="About sections"
+              data-about-submenu
+              data-open="false"
+            >
+              <li><a href="about.html#journey-heading">My Journey</a></li>
+              <li>
+                <a href="about.html#bring-heading">Who I am and what I bring</a>
+              </li>
+              <li>
+                <a href="about.html#human-heading"
+                  >A Human and Practical Approach</a
+                >
+              </li>
+              <li><a href="about.html#experience-heading">Experience</a></li>
+              <li><a href="about.html#why-heading">Why work with me?</a></li>
+            </ul>
+          </div>
           <a class="primary-nav__link" href="services.html">Services</a>
           <a class="primary-nav__link" href="contact.html">Contact</a>
           <a
@@ -89,7 +122,6 @@
             <h1 id="home-heading">
               Organisational Leadership Consulting &amp; Executive Coaching
             </h1>
-            <span class="accent-rule" aria-hidden="true"></span>
             <p>
               For leaders and organisations navigating complexity, developing
               effectiveness and creating sustainable change.
@@ -137,24 +169,20 @@
               Leadership and organisational challenges are rarely individual
               problems.
             </h2>
-            <span class="accent-rule" aria-hidden="true"></span>
           </div>
           <div class="reading-width">
-            <p>
-              They emerge through people, their relationships, context and the
-              structures around them. Together, these shape the culture and
-              conditions in which people work.
-            </p>
             <p>
               I help leaders, managers and teams understand what is really
               happening, align around a clear direction, strengthen the
               relationships and behaviours that shape performance, and move
               forward with greater clarity and trust.
             </p>
-            <p>
-              The result is work worth being part of and outcomes to be proud
-              of.
-            </p>
+            <div class="positioning-outcomes">
+              <p class="positioning-outcome-line">
+                The result — work worth being part of.
+              </p>
+              <p class="positioning-outcome-line">Outcomes to be proud of.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -237,152 +265,6 @@
       </section>
 
       <section
-        class="section experience-associations"
-        aria-labelledby="experience-heading"
-      >
-        <div class="container">
-          <div class="experience-introduction">
-            <div>
-              <h2 id="experience-heading">Experience</h2>
-              <span class="accent-rule" aria-hidden="true"></span>
-            </div>
-
-            <p class="experience-statement">
-              My background is in
-              <span
-                class="organisation-names"
-                aria-label="IBM Microsoft The Economist Nokia"
-              >
-                <span>IBM</span>
-                <span>Microsoft</span>
-                <span>The Economist</span>
-                <span>Nokia</span>
-              </span>
-              <span class="credentials-continuation">
-                working with professional certification in organisational
-                tranformation, executive coaching, facilitation and mindset
-                training.
-              </span>
-            </p>
-          </div>
-
-          <div class="association-group">
-            <p class="association-label">Partnerships and associations with:</p>
-
-            <div class="association-marks">
-              <a
-                href="https://www.arbingerinstitute.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Arbinger Institute UK website"
-              >
-                <picture class="association-mark association-mark--arbinger">
-                  <source
-                    srcset="assets/associations/arbinger-institute-uk-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="assets/associations/arbinger-institute-uk-logo.png"
-                    alt="Arbinger Institute UK"
-                    width="640"
-                    height="202"
-                    loading="lazy"
-                  />
-                </picture>
-              </a>
-
-              <a
-                href="https://www.betterfasterfurther.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Better Faster Further website"
-              >
-                <picture class="association-mark association-mark--bff">
-                  <source
-                    srcset="assets/associations/better-faster-further-logo.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="assets/associations/better-faster-further-logo.jpg"
-                    alt="Better Faster Further"
-                    width="200"
-                    height="200"
-                    loading="lazy"
-                  />
-                </picture>
-              </a>
-
-              <a
-                href="https://www.stellafai.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Stellafai website"
-              >
-                <span class="association-mark association-mark--stellafai">
-                  <img
-                    src="assets/associations/stellafai-logo.svg"
-                    alt="Stellafai"
-                    width="198"
-                    height="70"
-                    loading="lazy"
-                  />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="section section--spacious testimonial"
-        aria-label="Client testimonial"
-      >
-        <div class="container testimonial__inner">
-          <blockquote>
-            <p>
-              Shane brings a rare mix of clarity, empathy, and strategic
-              thinking to his coaching. He helped me identify blind spots I
-              didn’t even realise I had and gave me the tools to address them
-              confidently.
-            </p>
-            <cite>— Katarina Ciganikova, IBM</cite>
-          </blockquote>
-        </div>
-      </section>
-
-      <section
-        class="section section--spacious why-section"
-        aria-labelledby="why-heading"
-      >
-        <div class="container why-layout">
-          <div class="why-heading-group">
-            <h2 id="why-heading">Why work with me?</h2>
-            <span class="accent-rule" aria-hidden="true"></span>
-            <p class="experience-anchor">
-              <strong>Over 30 years' experience</strong> helping people, teams
-              and organisations transform how they work and the outcomes they
-              achieve.
-            </p>
-          </div>
-
-          <div class="why-argument">
-            <p class="why-lead">
-              My work brings deep experience and a proven track record in
-              leadership development, organisational alignment, executive
-              coaching and cross-team facilitation.
-            </p>
-            <p>
-              I have a practical understanding, of the human and systemic
-              dynamics that shape how organisations perform and change.
-            </p>
-            <p class="why-close">
-              The work is calm, direct and grounded in reality.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
         class="conversation-section"
         aria-labelledby="conversation-heading"
       >
@@ -440,7 +322,19 @@
           <h2 class="site-footer__heading">Connect</h2>
           <nav aria-label="Connect">
             <a href="mailto:shane@shanedowley.com">Email</a>
-            <a href="https://www.linkedin.com/in/shanedowley/">LinkedIn</a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/shanedowley/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shane Dowley on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M5.3 3.5A1.8 1.8 0 1 1 5.3 7a1.8 1.8 0 0 1 0-3.5ZM3.8 8.5h3v11.7h-3V8.5Zm5 0h2.9v1.6h.1c.4-.8 1.4-2 3.4-2 3.6 0 4.3 2.4 4.3 5.5v6.6h-3v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v5.9h-3V8.5Z"
+                />
+              </svg>
+            </a>
           </nav>
         </div>
         <div>

@@ -1631,6 +1631,44 @@ blockquote {
   border-block-start: var(--border-width) solid rgba(9, 26, 52, 0.24);
 }
 
+/* Room to Think preparation page. */
+.prepare-hero {
+  color: var(--color-ink);
+  background: var(--color-cream);
+}
+
+.prepare-hero__content {
+  max-width: var(--reading-width);
+  padding-block: var(--space-2xl);
+}
+
+.prepare-eyebrow {
+  margin-block-end: var(--space-md);
+  color: var(--color-lavender);
+  font-size: var(--font-size-xs);
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.prepare-hero h1 {
+  margin-block-end: var(--space-lg);
+  font-size: var(--font-size-h1);
+}
+
+.prepare-hero h1 span {
+  display: block;
+}
+
+.prepare-hero__content > p:not(.prepare-eyebrow) {
+  max-width: 38rem;
+}
+
+.prepare-hero__actions {
+  margin-block-start: var(--space-lg);
+}
+
 /* Contact page. */
 .contact-hero {
   color: var(--color-paper);

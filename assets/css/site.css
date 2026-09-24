@@ -1031,9 +1031,13 @@ blockquote {
 }
 
 .home-offering__intro h2 {
-  max-width: 16ch;
+  max-width: none;
   margin-block-end: 0;
   font-size: var(--font-size-h2);
+}
+
+.wide-only-break {
+  display: inline;
 }
 
 .home-offering__body {
@@ -2785,6 +2789,10 @@ blockquote {
   .about-bring__grid,
   .home-offering__grid {
     grid-template-columns: 1fr;
+  }
+
+  .wide-only-break {
+    display: none;
   }
 
   .home-offering__intro {

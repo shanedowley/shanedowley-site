@@ -1600,43 +1600,6 @@ blockquote {
   border-inline-start: var(--border-width) solid var(--color-border);
 }
 
-.service-association {
-  width: 100%;
-  min-height: 7.5rem;
-  display: grid;
-  place-items: center;
-}
-
-.service-association__media,
-.service-association__logo {
-  display: block;
-}
-
-.service-association__media {
-  width: 100%;
-}
-
-.service-association__logo {
-  width: 100%;
-  height: auto;
-  margin-inline: auto;
-  object-fit: contain;
-}
-
-.service-association--arbinger .service-association__media {
-  max-width: 13rem;
-}
-
-.service-association--bff .service-association__media {
-  max-width: 8.5rem;
-}
-
-.service-association--stellafai .service-association__media {
-  max-width: 12rem;
-  padding: var(--space-sm);
-  background: var(--color-navy);
-}
-
 .service-testimonial {
   position: relative;
   padding-block-start: 3.5rem;
@@ -1670,10 +1633,6 @@ blockquote {
   display: block;
   margin-block-start: 0.25rem;
   font-weight: 500;
-}
-
-.service-detail__aside--partner-only {
-  justify-content: flex-start;
 }
 
 .services-process {
@@ -2687,11 +2646,6 @@ blockquote {
     border-block-start: var(--border-width) solid var(--color-border);
     border-inline-start: 0;
   }
-
-  .service-detail__aside--partner-only {
-    grid-template-columns: minmax(15rem, 24rem);
-    justify-content: end;
-  }
 }
 
 @media (max-width: 54rem) {
@@ -2878,8 +2832,7 @@ blockquote {
     padding-inline: var(--gutter);
   }
 
-  .service-detail__aside,
-  .service-detail__aside--partner-only {
+  .service-detail__aside {
     grid-column: auto;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
     justify-content: stretch;
@@ -3185,25 +3138,12 @@ blockquote {
 
   .service-list,
   .services-process__copy,
-  .service-detail__aside,
-  .service-detail__aside--partner-only {
+  .service-detail__aside {
     grid-template-columns: 1fr;
   }
 
   .service-detail__aside {
     padding-inline: var(--gutter);
-  }
-
-  .service-association--arbinger .service-association__media {
-    max-width: 11.5rem;
-  }
-
-  .service-association--bff .service-association__media {
-    max-width: 7.5rem;
-  }
-
-  .service-association--stellafai .service-association__media {
-    max-width: 11rem;
   }
 
   .contact-location__content {
